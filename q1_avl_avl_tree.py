@@ -119,6 +119,27 @@
       },
       "execution_count": null,
       "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# test_avl.py\n",
+        "from avl_tree import insert, range_sum\n",
+        "\n",
+        "# build tree\n",
+        "root = None\n",
+        "for v in [10, 5, 15, 3, 7, 13, 17, 1, 6]:\n",
+        "    root = insert(root, v)\n",
+        "\n",
+        "print(\"Full subtree sum:\", root.subtree_sum)\n",
+        "print(\"Range [5,15] sum (expected 56):\", range_sum(root, 5, 15))\n",
+        "print(\"Range [1,3] sum (expected 4):\", range_sum(root,1,3))"
+      ],
+      "metadata": {
+        "id": "1XtKfnjej2IO"
+      },
+      "execution_count": null,
+      "outputs": []
     }
   ],
   "metadata": {
