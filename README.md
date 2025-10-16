@@ -10,5 +10,4 @@ Maintain metadata on insertions and rotations so range queries can:
 - Skip whole subtrees outside [L,R]
 - Use subtree_sum for whole-subtree inclusion
 
-How to run:
-python3 q1_avl/test_avl.py
+
