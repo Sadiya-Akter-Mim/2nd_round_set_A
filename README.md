@@ -19,6 +19,25 @@ B-Tree stores multiple keys per node; tuned for disk pages.
 Use case here: map chunk_id -> pointer (storage node/path).
 In production use RocksDB/LMDB or dedicated index for persistent disk-backed mappings.
 
+# Q3 — Distributed MST (Boruvka simulation)
+
+- File: simulate_mst.py
+
+Concept:
+Boruvka's algorithm picks cheapest outgoing edge per component repeatedly and merges.
+This structure maps well to distributed settings (parallel rounds).
+Use cases: sensor network aggregation, pre-processing graphs for ML.
+
+# Q4 — Memory management comparison
+
+- File: bench_memory.py
+
+Concept:
+Slab allocation uses preallocated fixed-size blocks, yielding predictable allocation/deallocation times.
+Garbage-collected or naive allocations are simpler but can cause variable latency.
+
+
+
 
 
 
